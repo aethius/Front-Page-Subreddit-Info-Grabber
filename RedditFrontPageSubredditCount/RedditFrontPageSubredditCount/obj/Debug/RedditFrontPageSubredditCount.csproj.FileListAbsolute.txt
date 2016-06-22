@@ -1,0 +1,6 @@
+c:\users\anthony\documents\visual studio 2015\Projects\RedditFrontPageSubredditCount\RedditFrontPageSubredditCount\bin\Debug\RedditFrontPageSubredditCount.exe.config
+c:\users\anthony\documents\visual studio 2015\Projects\RedditFrontPageSubredditCount\RedditFrontPageSubredditCount\bin\Debug\RedditFrontPageSubredditCount.exe
+c:\users\anthony\documents\visual studio 2015\Projects\RedditFrontPageSubredditCount\RedditFrontPageSubredditCount\bin\Debug\RedditFrontPageSubredditCount.pdb
+c:\users\anthony\documents\visual studio 2015\Projects\RedditFrontPageSubredditCount\RedditFrontPageSubredditCount\obj\Debug\RedditFrontPageSubredditCount.csprojResolveAssemblyReference.cache
+c:\users\anthony\documents\visual studio 2015\Projects\RedditFrontPageSubredditCount\RedditFrontPageSubredditCount\obj\Debug\RedditFrontPageSubredditCount.exe
+c:\users\anthony\documents\visual studio 2015\Projects\RedditFrontPageSubredditCount\RedditFrontPageSubredditCount\obj\Debug\RedditFrontPageSubredditCount.pdb
