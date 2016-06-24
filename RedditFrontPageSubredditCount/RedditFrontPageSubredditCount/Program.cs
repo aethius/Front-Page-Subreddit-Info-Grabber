@@ -12,31 +12,64 @@ namespace RedditFrontPageSubredditCount
     {
         static void Main(string[] args)
         {
-            WebClient client = new WebClient();
-            string reply = client.DownloadString("http://reddit.com/r/all");
-
-            string findPoint = "data-subreddit=\"";
-            //string findPoint = "goofygoober";
-
-            // For seeing the entire html grabbed from the source
-            // Console.WriteLine(reply);
-            // File.WriteAllText(@"C:\users\anthony\documents\C#\redditfrontpage.txt", reply);
-            int count = 0;
+            bool again = false;
+            string userReply;
             do
             {
-                count++;
-                int first = reply.IndexOf(findPoint) + findPoint.Length;
-               // Console.WriteLine(reply.IndexOf(findPoint));
-                reply = reply.Substring(first);
+                WebClient client = new WebClient();
+                string reply = client.DownloadString("http://reddit.com/r/all");
 
-                int second = reply.IndexOf("\"");
+                string findPoint = "data-subreddit=\"";
+                //string findPoint = "goofygoober";
 
-                string subreddit = reply.Substring(0, second);
+                // For seeing the entire html grabbed from the source
+                // Console.WriteLine(reply);
+                // File.WriteAllText(@"C:\users\anthony\documents\C#\redditfrontpage.txt", reply);
+                int count = 0;
+                do
+                {
+                    count++;
+                    int first = reply.IndexOf(findPoint) + findPoint.Length;
+                    // Console.WriteLine(reply.IndexOf(findPoint));
+                    reply = reply.Substring(first);
 
-                Console.Write(count + " ");
-                Console.WriteLine(subreddit);
+                    int second = reply.IndexOf("\"");
 
-            } while (reply.IndexOf(findPoint) != -1 );
+                    string subreddit = reply.Substring(0, second);
+
+                    Console.Write(count + " ");
+                    Console.WriteLine(subreddit);
+
+                } while (reply.IndexOf(findPoint) != -1);
+
+                bool userResponse;
+                do
+                {
+                    Console.Write("Again? (y/n): ");
+                    userReply = Console.ReadLine();
+                    //Console.WriteLine(again);
+
+                    if (userReply == "y")
+                    {
+                        again = true;
+                        userResponse = true;
+                    }
+                    else if (userReply == "n")
+                    {
+                        again = false;
+                        userResponse = true;
+
+                    }
+                    else
+                    {
+                        userResponse = false;
+                    }
+                } while (userResponse == false);
+                 
+               
+
+
+            } while (again == true);
 
 
 
@@ -44,9 +77,7 @@ namespace RedditFrontPageSubredditCount
 
 
 
-
-
-            Console.ReadLine();
+            // Console.ReadLine();
         }
     }
 }
